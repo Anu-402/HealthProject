@@ -26,13 +26,17 @@ public class HealthTest {
 	@ManyToOne
 	@JoinColumn(name="centerid")
 	private Center center;
-    
-	
-	
-	public HealthTest(int testId, String testName) {
+   
+
+	public HealthTest(int testId, String testName, Center center) {
 		super();
 		this.testId = testId;
 		this.testName = testName;
+		this.center = center;
+	}
+
+	public HealthTest() {
+		super();
 	}
 
 	public int getTestId() {
